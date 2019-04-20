@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ForBroadcastReceiver"></activity>
+        <activity android:name=".ForAidl"></activity>
+        <activity android:name=".ForBroadcastReceiver" />
         <activity android:name=".ForActivity" />
         <activity android:name=".ForContentprovider" />
         <activity android:name=".MainActivity">

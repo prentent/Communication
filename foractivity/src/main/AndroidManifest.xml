@@ -29,6 +29,7 @@
         <receiver android:name=".MyBroadcastReceiver">
             <intent-filter>
                 <action android:name="com.lh.receiver" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
         <provider
@@ -36,6 +37,16 @@
             android:authorities="com.lh.foractivity.provider"
             android:exported="true"
             android:permission="com.lh.foractivity.PRIVATE" />
+        <service
+            android:name=".service.MyAidlService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lb.aidlservice" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </service>
+
     </application>
 
 </manifest>

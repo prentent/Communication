@@ -24,8 +24,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.button2:  //BroadcastReceiver进程间通信
                 startActivity(new Intent(this, ForBroadcastReceiver.class));
                 break;
-            case R.id.button4:
+            case R.id.button4: //Contentprovider进程间通信
                 startActivity(new Intent(this, ForContentprovider.class));
+                break;
+            case R.id.buttn5:  //Aidl进程间通信
+                startActivity(new Intent(this, ForAidl.class));
                 break;
             default:
                 break;
