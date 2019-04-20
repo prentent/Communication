@@ -4,6 +4,7 @@
     package="com.lh.communication">
 
     <uses-permission android:name="com.lh.foractivity.PRIVATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ForAidl"></activity>
+        <activity android:name=".ForFile"></activity>
+        <activity android:name=".ForMessenger" />
+        <activity android:name=".ForAidl" />
         <activity android:name=".ForBroadcastReceiver" />
         <activity android:name=".ForActivity" />
         <activity android:name=".ForContentprovider" />

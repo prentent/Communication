@@ -8,6 +8,8 @@
         android:label="can read write"
         android:protectionLevel="normal" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,6 +39,7 @@
             android:authorities="com.lh.foractivity.provider"
             android:exported="true"
             android:permission="com.lh.foractivity.PRIVATE" />
+
         <service
             android:name=".service.MyAidlService"
             android:exported="true">
@@ -45,6 +48,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
+        </service>
+        <service
+            android:name=".MyMessengerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lb.servicemessenger" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </service>
 
     </application>

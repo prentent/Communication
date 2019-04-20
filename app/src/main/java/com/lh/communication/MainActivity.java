@@ -1,9 +1,8 @@
 package com.lh.communication;
 
-import android.content.ComponentName;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.buttn5:  //Aidl进程间通信
                 startActivity(new Intent(this, ForAidl.class));
+                break;
+            case R.id.buttn6:  //Messenger进程间通信
+                startActivity(new Intent(this, ForMessenger.class));
+                break;
+            case R.id.buttn7:
+                startActivity(new Intent(this, ForFile.class));
                 break;
             default:
                 break;

@@ -4,13 +4,20 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Book implements Parcelable {
-    protected Book(Parcel in) {
-        name = in.readString();
-        rice = in.readFloat();
+
+    public Book() {
+
     }
 
     private String name;
     private float rice;
+    private String address;
+
+    protected Book(Parcel in) {
+        name = in.readString();
+        rice = in.readFloat();
+        address = in.readString();
+    }
 
     public static final Creator<Book> CREATOR = new Creator<Book>() {
         @Override
@@ -23,6 +30,14 @@ public class Book implements Parcelable {
             return new Book[size];
         }
     };
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public String getName() {
         return name;
@@ -50,5 +65,6 @@ public class Book implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
         dest.writeFloat(rice);
+        dest.writeString(address);
     }
 }
