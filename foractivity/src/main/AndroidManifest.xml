@@ -22,10 +22,15 @@
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="com.lh.test" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.lh.receiver" />
+            </intent-filter>
+        </receiver>
         <provider
             android:name=".MyContentprovider"
             android:authorities="com.lh.foractivity.provider"

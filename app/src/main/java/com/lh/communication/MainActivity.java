@@ -17,27 +17,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClick(View view) {
-        startActivityC1();
-        // startActivityC2();
-    }
-
-    //隐式启动方式
-    private void startActivityC1() {
-        Intent intent = new Intent("com.lh.test");
-        intent.putExtra("name", "传递过来的值");
-        startActivity(intent);
-
-    }
-
-    private void startActivityC2() {
-        ComponentName component = new ComponentName("com.lh.foractivity", "com.lh.foractivity.MainActivity");
-        Intent intent = new Intent();
-        intent.putExtra("name", "传递过来的值");
-        intent.setComponent(component);
-        startActivity(intent);
-    }
-
-    public void onClickProiver(View view) {
-        startActivity(new Intent(this, ForContentprovider.class));
+        switch (view.getId()) {
+            case R.id.button:  //Activity进程间通信
+                startActivity(new Intent(this, ForActivity.class));
+                break;
+            case R.id.button2:  //BroadcastReceiver进程间通信
+                startActivity(new Intent(this, ForBroadcastReceiver.class));
+                break;
+            case R.id.button4:
+                startActivity(new Intent(this, ForContentprovider.class));
+                break;
+            default:
+                break;
+        }
     }
 }
